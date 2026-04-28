@@ -1,0 +1,17 @@
+site_name: Bayesian Book of Beliefs
+site_url: https://redratz55.github.io/BayesianBookOfBeliefs/
+
+theme:
+  name: material
+
+plugins:
+  - blog:
+      blog_dir: . # Tells MkDocs the whole site is a blog
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
