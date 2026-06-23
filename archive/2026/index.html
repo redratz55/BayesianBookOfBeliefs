@@ -452,116 +452,13 @@
   <div class="md-post__content md-typeset">
     <h2 id="a-uniform-problem"><a class="toclink" href="../../2026/06/21/a-uniform-problem/">A Uniform Problem</a></h2>
 <p>Today's blog we'll tackle the Fiddler on the Proof puzzle for this weekend. </p>
-<p>Fiddler on the Proof is Zach Wissner-Gross' spiritual successor to his longstanding 538 series The Riddler.</p>
-<p>If you aren't a subscriber to his substack I'd recommend you do, the puzzle's are quite nice. </p>
-<h3 id="the-puzzle"><a class="toclink" href="../../2026/06/21/a-uniform-problem/#the-puzzle">The Puzzle:</a></h3>
-<p>I think the random number generator on my calculator might be malfunctioning. Oh no!</p>
-<p>Under normal conditions, it should generate random numbers between 0 and 1. But my suspicion is that the calculator is “tanked,” meaning it only generates random numbers between 0 and some value 0 &lt; a &lt; 1. Beyond that, I have no knowledge regarding the value of a. At the moment, it’s equally likely to be any value from 0 to 1.</p>
-<p>As an experiment, I ask the calculator to generate one random number. It produces a value of exactly 0.5. (While this is, admittedly, infinitely unlikely, let’s roll with it!)</p>
-<p>Based on this result, what can I expect the value of a to be, on average?</p>
-<h3 id="solving"><a class="toclink" href="../../2026/06/21/a-uniform-problem/#solving">Solving</a></h3>
-<p>We have a uniform random-number generator that should generate a number</p>
-<div class="arithmatex">\[
-X\sim \operatorname{Uniform}(0,1).
-\]</div>
-<p>However, we suspect that the generator is faulty and instead generates numbers uniformly between (0) and some unknown upper bound (A), where (0&lt;A&lt;1).</p>
-<p>We perform one draw and observe</p>
-<div class="arithmatex">\[
-X=0.5.
-\]</div>
-<p>We want to find</p>
-<div class="arithmatex">\[
-\mathbb E[A\mid X=0.5].
-\]</div>
-<p>Our model is</p>
-<div class="arithmatex">\[
-A\sim \operatorname{Uniform}(0,1),
-\qquad
-X\mid A=a\sim \operatorname{Uniform}(0,a).
-\]</div>
-<p>The general conditional density of (X) given (A=a) is</p>
-<div class="arithmatex">\[
-\frac1a\mathbf 1_{{0\le x\le a}}.
-\]</div>
-<p>After observing (X=0.5), the likelihood as a function of (a) is</p>
-<div class="arithmatex">\[
-\frac1a\mathbf 1_{{0.5\le a\le1}}.
-\]</div>
-<p>Any value (a&lt;0.5) is impossible because a generator supported on ([0,a]) could not have produced (0.5). For <span class="arithmatex">\((a\ge0.5)\)</span>, the density of a uniform distribution on ([0,a]) is</p>
-<div class="arithmatex">\[
-\frac{1}{a-0}=\frac1a.
-\]</div>
-<p>We now combine the likelihood with the prior to obtain the posterior and then compute its expectation.</p>
-<p>Because</p>
-<div class="arithmatex">\[
-A\sim \operatorname{Uniform}(0,1),
-\]</div>
-<p>the prior density is</p>
-<div class="arithmatex">\[
-f_A(a)=\mathbf 1_{{0&lt;a&lt;1}}.
-\]</div>
-<p>Equivalently, <span class="arithmatex">\((f_A(a)=1)\)</span> on ((0,1)) and (0) otherwise.</p>
-<p>Unnormalized posterior</p>
-<p>By Bayes' rule,</p>
-<div class="arithmatex">\[
-f_{A\mid X}(a\mid0.5)
-\propto
-f_{X\mid A}(0.5\mid a)f_A(a).
-\]</div>
-<p>Therefore,</p>
-<div class="arithmatex">\[
-f_{A\mid X}(a\mid0.5)
-\propto
-\frac1a\mathbf 1_{{0.5\le a\le1}}.
-\]</div>
-<p>To obtain a proper probability density, we need a normalizing constant (C) such that</p>
-<div class="arithmatex">\[
-C\int_{0.5}^{1}\frac1a,da=1.
-\]</div>
-<p>Thus,</p>
-<div class="arithmatex">\[
-C[\ln a]_{0.5}^{1}=1,
-\]</div>
-<p>so</p>
-<div class="arithmatex">\[
-C\bigl(\ln 1-\ln 0.5\bigr)=1.
-\]</div>
-<p>Because</p>
-<div class="arithmatex">\[
-\ln 1-\ln 0.5=\ln 2,
-\]</div>
-<p>we have</p>
-<div class="arithmatex">\[
-C\ln 2=1 \implies C=\frac1{\ln 2}.
-\]</div>
-<p>The normalized posterior density is therefore</p>
-<div class="arithmatex">\[
-\frac{1}{a\ln 2}
-\mathbf 1_{{0.5\le a\le1}}.
-\]</div>
-<p>Equivalently,</p>
-<div class="arithmatex">\[
-\begin{cases}
-\dfrac{1}{a\ln 2}, &amp; 0.5 \le a \le 1,\\
-0, &amp; \text{otherwise}.
-\end{cases}
-\]</div>
-<p>Finally, the posterior expectation is</p>
-<div class="arithmatex">\[
-\int_{0.5}^{1}
-a\frac{1}{a\ln 2},da.
-\]</div>
-<p>The (a) terms cancel, giving</p>
-<div class="arithmatex">\[
-\frac1{\ln 2}\int_{0.5}^{1}1,da.
-\]</div>
-<p>Therefore,</p>
-<div class="arithmatex">\[
-\frac{0.5}{\ln 2}=
-\frac{1}{2\ln 2}
-\approx
-\boxed{0.7213}.
-\]</div>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2026/06/21/a-uniform-problem/">
+          Continue reading
+        </a>
+      </nav>
     
     
   </div>
