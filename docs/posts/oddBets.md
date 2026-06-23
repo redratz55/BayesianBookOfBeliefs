@@ -1,7 +1,7 @@
 ---
 date: 2026-04-28
 categories:
-  - General
+  - bayesian-bets
 description: We're currently in the 2026 NHL Stanley Cup Playoffs. My dad and I have been setting betting lines on weird prop bets for the Oilers vs Ducks series. As we head in to game five, it's my turn to set some lines. 
 ---
 
@@ -202,7 +202,7 @@ $$
 We multiply the outer product of $\theta_A^{(s)} \otimes \theta_E^{(s)}$ with the pairwise absolute difference of the jersey numbers:
 
 $$
-E[D]^{(s)} = \sum_{k=1}^K \sum_{m=1}^M (\theta_{A, k}^{(s)} \theta_{E, m}^{(s)} |j_{A, k} - j_{E, m} )
+E[D]^{(s)} = \sum_{k=1}^K \sum_{m=1}^M (\theta_{A, k}^{(s)} \theta_{E, m}^{(s)} |j_{A, k} - j_{E, m} |)
 $$
 
 

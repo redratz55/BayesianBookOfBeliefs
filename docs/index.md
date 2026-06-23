@@ -12,7 +12,8 @@ Here we'll look at fun problems in math, try our hands at math modeling, explore
 
 ### Browse by Series
 * **[🧩 Puzzling Problems](category/puzzling-problems/)** - Fun or interesting math problems and brainteasers.
-* **[📊 General Problems](category/general/)** - Deep-ish dives into everyday odds and probability theory.
+* **[📊 Bayesian Bets](category/bayesian-bets/)** - Deep-ish dives into everyday odds and probability theory.
+* **[🧪 Miscellaneous Models](category/miscellaneous-models/)** - Small experiments, simulations, and mathematical models that do not fit neatly elsewhere.
 
 
 ---
