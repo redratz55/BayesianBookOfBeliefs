@@ -1,7 +1,7 @@
 ---
 date: 2026-06-21
 categories:
-  - bayesian-bets
+  - puzzling-problems
 
 ---
 
