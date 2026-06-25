@@ -9,6 +9,8 @@ categories:
 
 Today's blog we'll tackle the Fiddler on the Proof puzzle for this weekend. 
 
+<!-- more -->
+
 Fiddler on the Proof is Zach Wissner-Gross' spiritual successor to his longstanding 538 series The Riddler.
 
 If you aren't a subscriber to his substack I'd recommend you do, the puzzle's are quite nice. 
@@ -166,7 +168,7 @@ $$
 Therefore,
 
 $$
-\frac{0.5}{\ln 2}\\
+\frac{0.5}{\ln 2}=
 \frac{1}{2\ln 2}
 \approx
 \boxed{0.7213}.

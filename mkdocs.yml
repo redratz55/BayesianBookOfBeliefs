@@ -5,10 +5,25 @@ theme:
   name: material
 
 plugins:
+  - search
   - blog:
       blog_dir: . # Tells MkDocs the whole site is a blog
+      post_dir: posts
+      post_url_format: "{date}/{slug}"
+      archive: true
+      categories: true
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.arithmatex:
       generic: true
 

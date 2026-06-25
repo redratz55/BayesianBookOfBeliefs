@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://redratz55.github.io/BayesianBookOfBeliefs/2026/05/01/an-inebriated-flight/">
+        <link rel="canonical" href="https://redratz55.github.io/BayesianBookOfBeliefs/2026/06/21/a-uniform-problem/">
       
       
-        <link rel="prev" href="../../../04/30/we-happy-few/">
+        <link rel="prev" href="../../../05/01/an-inebriated-flight/">
       
-      
-        <link rel="next" href="../../../06/21/a-uniform-problem/">
       
       
         
@@ -25,7 +23,7 @@
     
     
       
-        <title>An Inebriated Flight - Bayesian Book of Beliefs</title>
+        <title>A Uniform Problem - Bayesian Book of Beliefs</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#an-inebriated-flight" class="md-skip">
+        <a href="#a-uniform-problem" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              An Inebriated Flight
+              A Uniform Problem
             
           </span>
         </div>
@@ -404,6 +402,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-puzzle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Puzzle:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solving
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -439,7 +467,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-05-01 00:00:00+00:00" class="md-ellipsis">May 1, 2026</time>
+                        <time datetime="2026-06-21 00:00:00+00:00" class="md-ellipsis">June 21, 2026</time>
                       </div>
                     </li>
                     
@@ -461,7 +489,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -485,100 +513,119 @@
 
 
 
-<h1 id="an-inebriated-flight">An Inebriated Flight</h1>
-<p>Part 3 of our drunk passenger problems.</p>
-<p>In this problem we'll bring our series to a close and find a way to generalize the expected value calculation to multiple drunk passengers.</p>
+<h1 id="a-uniform-problem">A Uniform Problem</h1>
+<p>Today's blog we'll tackle the Fiddler on the Proof puzzle for this weekend. </p>
 <!-- more -->
 
-<h1 id="the-problem">The Problem</h1>
-<p>Consider 50 passengers boarding an airplane with 50 seats, where passenger <span class="arithmatex">\(i\)</span> is assigned to seat <span class="arithmatex">\(i\)</span> for <span class="arithmatex">\(i = 1, \dots, 50\)</span>.</p>
-<p>The first 10 passengers are drunk and choose their seats uniformly at random from the set of all unoccupied seats, without regard to their assigned seats.</p>
-<p>Each subsequent passenger <span class="arithmatex">\(r = 11, \dots, 50\)</span> follows the rule:</p>
-<ul>
-<li>
-<p>If seat <span class="arithmatex">\(r\)</span> is unoccupied, passenger <span class="arithmatex">\(r\)</span> sits in seat <span class="arithmatex">\(r\)</span>.</p>
-</li>
-<li>
-<p>Otherwise, passenger <span class="arithmatex">\(r\)</span> chooses a seat uniformly at random from the set of remaining unoccupied seats. </p>
-</li>
-</ul>
-<p>What is the expected number of passengers sitting in the correct seats?</p>
-<h1 id="solution">Solution</h1>
-<p>Let</p>
+<p>Fiddler on the Proof is Zach Wissner-Gross' spiritual successor to his longstanding 538 series The Riddler.</p>
+<p>If you aren't a subscriber to his substack I'd recommend you do, the puzzle's are quite nice. </p>
+<h2 id="the-puzzle">The Puzzle:</h2>
+<p>I think the random number generator on my calculator might be malfunctioning. Oh no!</p>
+<p>Under normal conditions, it should generate random numbers between 0 and 1. But my suspicion is that the calculator is “tanked,” meaning it only generates random numbers between 0 and some value 0 &lt; a &lt; 1. Beyond that, I have no knowledge regarding the value of a. At the moment, it’s equally likely to be any value from 0 to 1.</p>
+<p>As an experiment, I ask the calculator to generate one random number. It produces a value of exactly 0.5. (While this is, admittedly, infinitely unlikely, let’s roll with it!)</p>
+<p>Based on this result, what can I expect the value of a to be, on average?</p>
+<h2 id="solving">Solving</h2>
+<p>We have a uniform random-number generator that should generate a number</p>
 <div class="arithmatex">\[
-N = 50
+X\sim \operatorname{Uniform}(0,1).
 \]</div>
-<p>be the total number of passengers, and let</p>
+<p>However, we suspect that the generator is faulty and instead generates numbers uniformly between (0) and some unknown upper bound (A), where (0&lt;A&lt;1).</p>
+<p>We perform one draw and observe</p>
 <div class="arithmatex">\[
-D = 10
+X=0.5.
 \]</div>
-<p>be the number of drunk passengers.</p>
-<p>The first <span class="arithmatex">\(10\)</span> passengers choose randomly, so by linearity of expectation for each drunk passenger, the probability of sitting in their assigned seat is</p>
+<p>We want to find</p>
 <div class="arithmatex">\[
-\frac{1}{50}.
+\mathbb E[A\mid X=0.5].
 \]</div>
-<p>Therefore, the expected number of drunk passengers sitting correctly is</p>
+<p>Our model is</p>
 <div class="arithmatex">\[
-10 \cdot \frac{1}{50} = \frac{1}{5}.
+A\sim \operatorname{Uniform}(0,1),
+\qquad
+X\mid A=a\sim \operatorname{Uniform}(0,a).
 \]</div>
-<p>Now consider a sober passenger <span class="arithmatex">\(r\)</span>, where</p>
+<p>The general conditional density of (X) given (A=a) is</p>
 <div class="arithmatex">\[
-11 \le r \le 50.
+\frac1a\mathbf 1_{{0\le x\le a}}.
 \]</div>
-<p>When passenger <span class="arithmatex">\(r\)</span> boards, the only seats that still matter are</p>
+<p>After observing (X=0.5), the likelihood as a function of (a) is</p>
 <div class="arithmatex">\[
-\{1,2,\dots,10\} \cup \{r,r+1,\dots,50\}.
+\frac1a\mathbf 1_{{0.5\le a\le1}}.
 \]</div>
-<p>The seats</p>
+<p>Any value (a&lt;0.5) is impossible because a generator supported on ([0,a]) could not have produced (0.5). For <span class="arithmatex">\((a\ge0.5)\)</span>, the density of a uniform distribution on ([0,a]) is</p>
 <div class="arithmatex">\[
-\{11,12,\dots,r-1\}
+\frac{1}{a-0}=\frac1a.
 \]</div>
-<p>have already resolved. They either contain their assigned passenger, or they have been consumed by the displacement chain.</p>
-<p>So the relevant unresolved set has size</p>
+<p>We now combine the likelihood with the prior to obtain the posterior and then compute its expectation.</p>
+<p>Because</p>
 <div class="arithmatex">\[
-10 + (50-r+1).
+A\sim \operatorname{Uniform}(0,1),
 \]</div>
-<p>Passenger <span class="arithmatex">\(r\)</span> is displaced if the chain reaches one of the original drunk seats before it reaches seat <span class="arithmatex">\(r\)</span>. There are <span class="arithmatex">\(10\)</span> original drunk seats, so</p>
+<p>the prior density is</p>
 <div class="arithmatex">\[
- P(\text{passenger } r \text{ is displaced}) =\frac{10}{10 + 50 - r + 1}.
+f_A(a)=\mathbf 1_{{0&lt;a&lt;1}}.
+\]</div>
+<p>Equivalently, <span class="arithmatex">\((f_A(a)=1)\)</span> on ((0,1)) and (0) otherwise.</p>
+<p>Unnormalized posterior</p>
+<p>By Bayes' rule,</p>
+<div class="arithmatex">\[
+f_{A\mid X}(a\mid0.5)
+\propto
+f_{X\mid A}(0.5\mid a)f_A(a).
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+f_{A\mid X}(a\mid0.5)
+\propto
+\frac1a\mathbf 1_{{0.5\le a\le1}}.
+\]</div>
+<p>To obtain a proper probability density, we need a normalizing constant (C) such that</p>
+<div class="arithmatex">\[
+C\int_{0.5}^{1}\frac1a,da=1.
 \]</div>
 <p>Thus,</p>
 <div class="arithmatex">\[
-P(\text{passenger } r \text{ sits correctly}) =1 -\frac{10}{10 + 50 - r + 1}.
+C[\ln a]_{0.5}^{1}=1,
 \]</div>
-<p>Simplifying,</p>
+<p>so</p>
 <div class="arithmatex">\[
-P(\text{passenger } r \text{ sits correctly})=\frac{50-r+1}{10 + 50-r+1}.
+C\bigl(\ln 1-\ln 0.5\bigr)=1.
 \]</div>
-<p>Therefore, the expected number of correct sober passengers is</p>
+<p>Because</p>
 <div class="arithmatex">\[
-\sum_{r=11}^{50}
-\frac{50-r+1}{10+50-r+1}.
+\ln 1-\ln 0.5=\ln 2,
 \]</div>
-<p>Including the drunk passengers, the total expected number of passengers sitting correctly is</p>
+<p>we have</p>
 <div class="arithmatex">\[
-E[\text{correct}]=\frac{10}{50}+\sum_{r=11}^{50}\frac{50-r+1}{10+50-r+1}.
+C\ln 2=1 \implies C=\frac1{\ln 2}.
+\]</div>
+<p>The normalized posterior density is therefore</p>
+<div class="arithmatex">\[
+\frac{1}{a\ln 2}
+\mathbf 1_{{0.5\le a\le1}}.
 \]</div>
 <p>Equivalently,</p>
 <div class="arithmatex">\[
-E[\text{correct}]=\frac{1}{5}+\sum_{r=11}^{50}\frac{51-r}{61-r}.
+\begin{cases}
+\dfrac{1}{a\ln 2}, &amp; 0.5 \le a \le 1,\\
+0, &amp; \text{otherwise}.
+\end{cases}
 \]</div>
-<p>Now let</p>
+<p>Finally, the posterior expectation is</p>
 <div class="arithmatex">\[
-k = 51-r.
+\int_{0.5}^{1}
+a\frac{1}{a\ln 2},da.
 \]</div>
-<p>As <span class="arithmatex">\(r\)</span> runs from <span class="arithmatex">\(11\)</span> to <span class="arithmatex">\(50\)</span>, <span class="arithmatex">\(k\)</span> runs from <span class="arithmatex">\(40\)</span> down to <span class="arithmatex">\(1\)</span>. So we can rewrite the expectation as</p>
+<p>The (a) terms cancel, giving</p>
 <div class="arithmatex">\[
-E[\text{correct}]=\frac{1}{5}+\sum_{k=1}^{40}\frac{k}{k+10}.
+\frac1{\ln 2}\int_{0.5}^{1}1,da.
 \]</div>
-<p>Numerically, this gives</p>
+<p>Therefore,</p>
 <div class="arithmatex">\[
-E[\text{correct}]
-\approx 24.518.
-\]</div>
-<p>So the expected number of passengers sitting in their assigned seats is</p>
-<div class="arithmatex">\[
-\boxed{24.518}
+\frac{0.5}{\ln 2}=
+\frac{1}{2\ln 2}
+\approx
+\boxed{0.7213}.
 \]</div>
 
 
